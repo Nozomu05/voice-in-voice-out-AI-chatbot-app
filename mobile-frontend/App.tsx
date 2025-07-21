@@ -18,9 +18,7 @@ import Voice, {
 import Sound from 'react-native-sound';
 
 // Backend configuration for voice chat bot
-// const BACKEND_URL = 'http://10.0.2.2:8000'; // Android emulator
-// const BACKEND_URL = 'http://localhost:8000'; // iOS simulator
-const BACKEND_URL = 'http://192.168.2.220:8000'; // Physical device
+const BACKEND_URL = 'https://services.edfly.vn/voiceinvoiceoutchatbot';
 
 interface ChatMessage {
   id: string;
@@ -46,8 +44,6 @@ const App: React.FC = () => {
         try {
           const grants = await PermissionsAndroid.requestMultiple([
             PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
-            PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-            PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
           ]);
 
           const audioGranted = grants['android.permission.RECORD_AUDIO'] === PermissionsAndroid.RESULTS.GRANTED;
