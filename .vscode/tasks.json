@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FastAPI Backend",
+      "type": "shell",
+      "command": "cd python-backend && venv\\Scripts\\activate && uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Run React Native Android",
+      "type": "shell",
+      "command": "cd mobile-frontend && npx react-native run-android",
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ]
+}

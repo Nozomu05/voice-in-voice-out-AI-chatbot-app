@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+openai
+SpeechRecognition
+gtts
+pydub
+python-multipart
+python-dotenv
